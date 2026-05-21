@@ -1,0 +1,8 @@
+# Synthesis script created by: ees-synthesize.oss, written by Gundolf Kiefer <gundolf.kiefer@hs-augsburg.de>.
+#
+# Command line:         ees-synthesize.oss -r Alu.vhdl
+# Running this script:  yosys -m ghdl -s Alu.ees/Alu.yosys
+
+ghdl Alu.vhdl  -e Alu 
+prep
+write_json Alu.rtl.json

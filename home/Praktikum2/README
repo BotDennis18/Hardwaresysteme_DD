@@ -1,0 +1,19 @@
+# ==========================================
+# VHDL Simulation Workflow (GHDL & GTKWave)
+# ==========================================
+
+# 1. Analysieren (Kompilieren)
+# Prüft den VHDL-Code auf Syntaxfehler und übersetzt die Dateien.
+ees-ghdl -a --std=08 Alu.vhdl Alu_tb.vhdl
+
+# 2. Elaborieren (Bauen)
+# Verknüpft die Module und baut das ausführbare Simulationsprogramm (für die Entity ALU_TB).
+ees-ghdl -e --std=08 ALU_TB
+
+# 3. Ausführen (Simulieren)
+# Startet die Simulation und speichert die Signalverläufe in der Datei Alu_tb.ghw.
+ees-ghdl -r --std=08 ALU_TB --wave=Alu_tb.ghw
+
+# 4. Für Anzeigen
+# Öffnet die erzeugten Signale grafisch. (Das & sorgt dafür, dass das Terminal weiter nutzbar bleibt).
+gtkwave Alu_tb.ghw &

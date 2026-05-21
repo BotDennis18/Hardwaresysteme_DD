@@ -1,0 +1,11 @@
+standard = "2008"
+[libraries]
+
+teroshdlDefault.files = [
+  '/home/eeslabor/home/half_adder_tb.vhdl',
+  '/home/eeslabor/home/Praktikum2/Alu.vhdl',
+  '/home/eeslabor/home/Praktikum2/Alu_tb.vhdl',
+]
+
+
+
