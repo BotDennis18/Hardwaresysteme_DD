@@ -69,7 +69,7 @@ begin
     end loop;
 
     report "Sel : 000 ----- Addition -------";
-      report to_string((signed(i_a)));
+    report to_string((signed(i_a)));
     report to_string((signed(i_b)));
     report "Das Ergebnis lautet: " & to_string(to_integer(signed(o_y)));
     assert signed(o_y) = 15 report "FEHLER: 10 + 5 ergab nicht 15!" severity error;
@@ -106,12 +106,12 @@ begin
 
     for n in 1 to 2 loop run_cycle;
     end loop;
-    i_sel <= "010"; -- AND
+    i_sel <= "100"; -- AND
     i_a   <= std_logic_vector(to_signed(5, 16));
     i_b   <= std_logic_vector(to_signed(5, 16));
     for n in 1 to 2 loop run_cycle;
     end loop;
-    report "Sel : 010 ----- AND -------";
+    report "Sel : 100 ----- AND -------";
       report to_string((signed(i_a))) & " AND ";
     report to_string((signed(i_b)));
     report "----------------- Das Ergebnis lautet: ";
@@ -124,12 +124,12 @@ begin
 
     for n in 1 to 2 loop run_cycle;
     end loop;
-    i_sel <= "011"; -- OR
+    i_sel <= "101"; -- OR
     i_a   <= std_logic_vector(to_signed(5, 16));
     i_b   <= std_logic_vector(to_signed(15, 16));
     for n in 1 to 2 loop run_cycle;
     end loop;
-    report "Sel : 011 ----- OR -------";
+    report "Sel : 101 ----- OR -------";
       report to_string((signed(i_a))) & " OR ";
     report to_string((signed(i_b)));
     report "----------------- Das Ergebnis lautet: ";
@@ -141,12 +141,12 @@ begin
 
     for n in 1 to 2 loop run_cycle;
     end loop;
-    i_sel <= "100"; -- XOR
+    i_sel <= "110"; -- XOR
     i_a   <= std_logic_vector(to_signed(7, 16));
     i_b   <= std_logic_vector(to_signed(5, 16));
     for n in 1 to 2 loop run_cycle;
     end loop;
-    report "Sel : 100 ----- XOR -------";
+    report "Sel : 110 ----- XOR -------";
       report to_string((signed(i_a))) & " XOR ";
     report to_string((signed(i_b)));
     report "-----------------  Das Ergebnis lautet: ";
@@ -158,12 +158,12 @@ begin
 
     for n in 1 to 2 loop run_cycle;
     end loop;
-    i_sel <= "101"; -- NOT
+    i_sel <= "111"; -- NOT
     i_a   <= std_logic_vector(to_signed(7, 16));
     i_b   <= std_logic_vector(to_signed(5, 16));
     for n in 1 to 2 loop run_cycle;
     end loop;
-    report "Sel : 101 ----- NOT -------";
+    report "Sel : 111 ----- NOT -------";
       report to_string((signed(i_a))) & " NOT ";
     report "----------------- Das Ergebnis not von A lautet: ";
       report to_string((signed(o_y)));
@@ -174,12 +174,12 @@ begin
 
     for n in 1 to 2 loop run_cycle;
     end loop;
-    i_sel <= "110"; -- Left Shift
+    i_sel <= "011"; -- Left Shift
     i_a   <= std_logic_vector(to_signed(7, 16));
     i_b   <= std_logic_vector(to_signed(5, 16));
     for n in 1 to 2 loop run_cycle;
     end loop;
-    report "Sel : 110 ----- Left Shift -------";
+    report "Sel : 011 ----- Left Shift -------";
       report to_string((signed(i_a))) & " << ";
     report "----------------- Das Ergebnis lautet, A rechts 0 Aufgefüllt: ";
       report to_string((signed(o_y)));
@@ -190,12 +190,12 @@ begin
 
     for n in 1 to 2 loop run_cycle;
     end loop;
-    i_sel <= "111"; -- Right Shift
+    i_sel <= "010"; -- Right Shift
     i_a   <= std_logic_vector(to_signed(7, 16));
     i_b   <= std_logic_vector(to_signed(5, 16));
     for n in 1 to 2 loop run_cycle;
     end loop;
-    report "Sel : 111 ----- Right Shift -------";
+    report "Sel : 010 ----- Right Shift -------";
       report to_string((signed(i_a))) & " >> ";
     report "----------------- Das Ergebnis lautet, A links 0 Aufgefüllt: ";
       report to_string((signed(o_y)));

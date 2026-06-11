@@ -98,8 +98,8 @@ Optimizing module ALU.
 
 2.8. Executing WREDUCE pass (reducing word size of cells).
 Removed top 2 bits (of 3) from port B of cell ALU.\9 ($eq).
-Removed top 1 bits (of 3) from port B of cell ALU.\12 ($eq).
-Removed top 1 bits (of 3) from port B of cell ALU.\15 ($eq).
+Removed top 1 bits (of 3) from port B of cell ALU.\14 ($eq).
+Removed top 1 bits (of 3) from port B of cell ALU.\19 ($eq).
 
 2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \ALU..
@@ -151,6 +151,6 @@ Found and reported 0 problems.
 
 3. Executing JSON backend.
 
-End of script. Logfile hash: e92c16f747, CPU: user 0.03s system 0.02s, MEM: 20.25 MB peak
+End of script. Logfile hash: 5ee3886c7b, CPU: user 0.34s system 0.04s, MEM: 20.62 MB peak
 Yosys 0.43+11 (git sha1 49f547782, clang++ 14.0.0-1ubuntu1.1 -fPIC -Os)
-Time spent: 66% 1x ghdl (0 sec), 8% 5x opt_expr (0 sec), ...
+Time spent: 68% 1x ghdl (0 sec), 4% 5x opt_expr (0 sec), ...
